@@ -1,0 +1,2 @@
+minutes = 160
+print("There are", 160//60, "hours", 160%60, "minutes in", minutes, "minutes")
