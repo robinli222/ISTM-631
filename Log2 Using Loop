@@ -1,0 +1,6 @@
+def log2(N):
+    log_b = 0
+    while N != int(round(2 ** log_b, 5)):
+        log_b += 0.001
+    print(log_b)
+log2(5)
