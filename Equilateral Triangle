@@ -1,0 +1,8 @@
+a = input('Enter the length of the first side: ')
+b = input('Enter the length of the second side: ')
+c = input('Enter the length of the third side: ')
+
+if a != b != c:
+    print('This triangle is NOT an equilateral triangle.')
+else:
+    print('This triangle IS an equilateral triangle.')
