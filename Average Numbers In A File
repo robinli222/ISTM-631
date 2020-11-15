@@ -1,0 +1,5 @@
+testfile = open('testfile.txt', 'r')
+content = testfile.read().split()
+numList = list(map(float, content)) 
+average = sum(numList) / len(numList)
+print(average)
