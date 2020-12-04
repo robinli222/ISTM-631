@@ -1,0 +1,16 @@
+import random
+
+ini_pot = int(input('Enter your pot: '))
+pot = [ini_pot]
+cur_pot = ini_pot
+while cur_pot >= 1:
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
+    if dice1 + dice2 == 7:
+        cur_pot +=4
+    else:
+        cur_pot -=1
+    pot.append(cur_pot)
+
+print('You have played ', len(pot)-1, ' games')
+print('Your maximum pot value is $' + str(max(pot)))
