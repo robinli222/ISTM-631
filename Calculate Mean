@@ -1,0 +1,13 @@
+#create empty list
+L = []
+#read file
+f = open('integers.txt', 'r')
+#read numbers
+for line in f:
+    L.append(int(line.rstrip('\n')))
+#calculate
+total = 0
+for a in L:
+    total += a
+avg = total / len(L)
+print(avg)    
