@@ -1,0 +1,5 @@
+days_year = 365
+hour_day = 24
+minutes_hour = 60
+
+print("There are " + str(days_year*hour_day*minutes_hour) + " minutes in a year.")
