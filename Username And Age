@@ -1,0 +1,5 @@
+userName = input("Enter your user's name: ")
+age = input('Enter your age:')
+
+print("The length of your user's name is: " + str(len(userName)))
+print("Your age is: " + str(age))
