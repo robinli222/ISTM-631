@@ -1,0 +1,26 @@
+import pandas as pd
+
+#define data lists
+lastName = []
+hourlyWage = []
+hoursWorked =[]
+data =[]
+
+#open file by input
+file_name = input('Enter your file name: ')
+file = open(file_name, 'r')
+
+#read data into pre-defined lists
+for line in file:
+    data = line.split('> <')
+    lastName.append(data[0])
+    hourlyWage.append(data[1])
+    hoursWorked.append(data[2])
+lastName1=[x.lstrip('<') for x in lastName]
+hoursWorked1 = [x.rstrip('>\n') for x in hoursWorked]
+final_data = {'Last Name' : lastName1, 
+              'Hourly Wage' : hourlyWage, 
+              'Hours Worked' : hoursWorked1}
+#build dataframe
+df = pd.DataFrame(final_data)
+print(df)
