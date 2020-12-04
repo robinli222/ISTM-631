@@ -1,0 +1,5 @@
+hr_wage = float(input('Enter your hourly wage: '))
+reg_hour = float(input('Enter your regular working hour: '))
+ot = float(input('Enter your overtime working hour: '))
+
+print("Your total weekly pay is $" + str(round(reg_hour*hr_wage+1.5*hr_wage*ot, 2)))
