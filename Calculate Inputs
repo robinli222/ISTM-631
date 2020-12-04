@@ -1,0 +1,26 @@
+#creat empty list
+L = []
+#input the first number as string
+a = input('Enter a number or press enter to quit: ')
+#enter following numbers as strings
+while a != '':
+    L.append(a)
+    a = input('Enter a number or press enter to quit: ')
+#transform last entered empty string into 0.0
+if a == '':
+    a = 0.0
+#append the last number
+L.append(a)
+#transform previous strings into float
+for i in range(len(L)-1):
+    L[i] = float(L[i])
+#calculate
+total = 0.0
+for i in L:
+    total += i
+n = len(L)
+avg = total / n
+#output
+print('The sum of the numbers is ', total)
+print('The mean of the numbers is ', avg)
+print(L)
