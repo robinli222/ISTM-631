@@ -1,0 +1,32 @@
+from PIL import Image
+
+#define function
+def posterize(image, rgb1, rgb2):
+    #load image to be posterized
+    im = Image.open(image)
+    #get image size (weight, height)
+    [w, h] = im.size
+    
+    #loop pixels in width and height
+    for x in range(w):
+        for y in range(h):
+            #get rgb by pixel
+            [r, g, b] = im.getpixel((x, y))
+            #assign new color
+            avg = (r + g + b) / 3
+            if avg < 128:
+                im.putpixel((x, y), rgb1)
+            else:
+                im.putpixel((x, y), rgb2)
+    #show posterized image
+    im.show()
+
+#test
+def main():
+    image = 'test.jpg'
+    rgb1 = (86, 174, 141)
+    rgb2 = (62, 123, 229)
+    posterize(image, rgb1, rgb2)
+    
+if __name__ == '__main__':
+    main()
